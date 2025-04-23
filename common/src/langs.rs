@@ -104,7 +104,7 @@ pub const LANGS: phf::Map<&'static str, Lang> = phf_map! {
     "vyxal3" => Lang {
         plugin_name: "vyxal3",
         display_name: "Vyxal 3",
-        run_command: &["/java/bin/java", "-jar", "${LANG_LOCATION}/bin/vyxal3.jar", "--file", "${FILE_LOCATION}", "--stdin"],
+        run_command: &["/java/bin/java", "-Dfile.encoding=UTF-8", "-jar", "${LANG_LOCATION}/bin/vyxal3.jar", "--file", "${FILE_LOCATION}", "--stdin"],
         plugin: "https://github.com/lyxal/vyxasd3f.git",
         env: &[
             ("LD_LIBRARY_PATH", "/java/lib:/lib"),
